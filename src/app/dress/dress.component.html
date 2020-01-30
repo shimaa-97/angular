@@ -1,0 +1,18 @@
+<div class="container margindown" >
+    <div class="row" >
+     <div class="col-4" *ngFor="let dress of showdress">
+     <div class="card cardstyle" >
+            <div class="sameline"> <i class="far fa-heart"></i> </div>
+            <div class="center" (click)="showdetails(dress)">
+            <img src="{{dress.img_url}}" >
+            <p>{{dress.name}}</p>
+           <p>{{dress.color}}</p>
+            <p> {{dress.price}} EGP</p>
+            </div>
+        <div class="card-body fontstyle">
+          
+        </div> 
+     
+            </div>
+     </div>
+    </div>

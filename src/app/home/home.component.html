@@ -1,0 +1,126 @@
+<html>
+
+<head>home</head>
+
+<body>
+  <ul class="nav nav-pills justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" routerLink="/bag">BAG</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" routerLink="/dress">Dress</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" routerLink="/makeup">makeup</a>
+    </li>
+  </ul>
+  
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-4 col-md-8 col-lg-12">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                  <li data-target="#demo" data-slide-to="0" class="active"></li>
+                  <li data-target="#demo" data-slide-to="1"></li>
+                  <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="../assets/images/8298b473c59ef8e00b337a5c4bf33a02d289b599-160318141811.jpg" width="100%" >
+                    <div class="carousel-caption">
+                    </div>   
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../assets/images/gril.jpg"  width="100%"  >
+                    <div class="carousel-caption">
+                      
+                    </div>   
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../assets/images/gril.jpg" width="100%" >
+                    <div class="carousel-caption">
+                     
+                    </div>   
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              </div>
+            </div>  
+    </div>
+    
+<br><br>
+        <div class="row" >
+          <div class="col-sm-12 col-md-8 col-lg-4" *ngFor="let make of showMakeup">
+          <div class="card cardstyle" >
+                 <div class="sameline">  </div>
+                 <div class="center" (click)="makeupdetails(make)">
+                 <img src="{{make.img_url}}" width="100%">
+                 <p>{{make.name}}</p>
+               
+                 <p> {{make.price}} EGP</p>
+                 </div>
+             <div class="card-body fontstyle">
+               
+             </div> 
+          
+                 
+          </div>
+          </div>
+        </div>       
+        <br>
+        <div class="row" >
+          <div class="col-sm-12 col-md-8 col-lg-4" *ngFor="let dress of showdress">
+          <div class="card cardstyle" >
+                 <div class="sameline">  </div>
+                 <div class="center" (click)="dressdetails(dress)">
+                 <img src="{{dress.img_url}}" width="100%" >
+                 <p>{{dress.name}}</p>
+                <p>{{dress.color}}</p>
+                 <p> {{dress.price}} EGP</p>
+                 </div>
+             <div class="card-body fontstyle">
+               
+             </div> 
+          
+          </div>
+          </div>
+        </div>
+<br>
+        <div class="row">
+          <div class="col-sm-12 col-md-8 col-lg-4 " *ngFor="let bag of bags">
+                <div class="card cardstyle cardstyle">
+        
+
+                      <div class="card-body fontstyle" (click)="bagdetails(bag)">
+                            <img src="{{bag.mainimg}}" width="100%">
+
+                            <div class="center">{{bag.name}}</div>
+
+                      </div>
+                      <h4 class="center">{{bag.price}}EGP</h4>
+
+
+                </div>
+          </div>
+        </div>
+        </div>
+         
+
+
+
+
+
+
+
+    
+
+   
+
+</body>
+
+</html>

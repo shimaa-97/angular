@@ -1,0 +1,38 @@
+<nav class="header">
+  <h2>bags</h2>
+</nav>
+<div class="container">
+   <div class="row">
+            <div class="col-4 " *ngFor="let bag of bags">
+                  <div class="card cardstyle cardstyle">
+                        <div class="sameline"(click)="addWishlist(bag)" >
+                              <a  ><i class="far fa-heart"></i> </a></div>
+
+                        <div class="card-body fontstyle" (click)="showdetails(bag)" >
+                              <img src="{{bag.mainimg}}">
+ 
+                              <div  class="center">{{bag.name}}</div>
+
+                        </div>
+                        <h4 class="center">{{bag.price}}</h4>
+
+
+                  </div>
+            </div>
+            <div class="col-4">
+
+
+
+            </div>
+            <div class="col-4"></div>
+
+
+      </div>
+      <br><br>
+</div>
+
+
+
+
+
+

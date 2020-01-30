@@ -1,0 +1,21 @@
+<div class="container margindown" >
+        <div class="row" >
+         <div class="col-4" *ngFor="let make of showMakeup">
+         <div class="card cardstyle" >
+                <div class="sameline"> <i class="far fa-heart"></i> </div>
+                <div class="center" (click)="makeupdetails(make)">
+                <img src="{{make.img_url}}" >
+                <p>{{make.name}}</p>
+              
+                <p> {{make.price}} EGP</p>
+                </div>
+            <div class="card-body fontstyle">
+                
+            </div> 
+         
+                 
+         
+         </div>
+         </div>
+        </div>
+    
